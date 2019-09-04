@@ -1,0 +1,14 @@
+<base-card>
+	<base-card-title>
+		<h2 class="mdl-card__title-text">Notice</h2>
+	</base-card-title>
+	<base-card-body>
+		<ng-container *ngIf="!isFinishLoading; else elseTemplate">
+			<app-loading></app-loading>
+		</ng-container>
+		<ng-template #elseTemplate>
+			<h6 class="title">{{data.Title}}</h6>
+			<p class="content">{{data.Content}}</p>
+		</ng-template>
+	</base-card-body>
+</base-card>

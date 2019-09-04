@@ -1,0 +1,9 @@
+<base-card>
+	<base-card-title>
+		<h2 class="mdl-card__title-text">Count</h2>
+	</base-card-title>
+	<base-card-body>
+		<app-pie-chart [hidden]="!isFinishLoading"></app-pie-chart>
+		<app-loading  *ngIf="!isFinishLoading"></app-loading>
+	</base-card-body>
+</base-card>

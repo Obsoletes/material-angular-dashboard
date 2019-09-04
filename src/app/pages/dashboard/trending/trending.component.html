@@ -1,0 +1,24 @@
+<base-card>
+	<base-card-title>
+		<h2 class="mdl-card__title-text">Trending</h2>
+	</base-card-title>
+	<base-card-body>
+		<ng-container *ngIf="!isFinishLoading; else elseTemplate">
+			<app-loading></app-loading>
+		</ng-container>
+		<ng-template #elseTemplate>
+			<ul class="mdl-list">
+				<li class="mdl-list__item" *ngFor="let d of data"
+					[ngClass]="'{list__item--border-top}:index!=0'">
+					<span class="mdl-list__item-primary-content list__item-text">{{d.Name}}</span>
+					<span class="mdl-list__item-secondary-content">
+						<i class="material-icons trending__arrow-up"
+							[ngClass]="{'trending__arrow-up': d.Status=='Up','trending__arrow-down':d.Status=='Down'}"
+							role="presentation">{{d.Status=='Up'?'arrow_drop_up':'arrow_drop_down'}}</i>
+					</span>
+					<span class="mdl-list__item-secondary-content trending__percent">{{d.Percent}}</span>
+				</li>
+			</ul>
+		</ng-template>
+	</base-card-body>
+</base-card>

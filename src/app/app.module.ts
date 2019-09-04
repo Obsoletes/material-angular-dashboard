@@ -10,26 +10,29 @@ import { AppComponent } from './app.component';
 import { DashboardModule } from './pages/dashboard';
 import { InvestigationsModule } from './pages/investigations';
 import { InvestigationsService } from './services/investigations.service';
+import { AppCommonModule } from './app-common.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DashboardModule,
-    HttpClientModule,
-    CommonModule,
-    InvestigationsModule,
-  ],
-  providers: [
-    InvestigationsService,
-    AuthService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
-  ],
-  bootstrap: [AppComponent],
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		DashboardModule,
+		HttpClientModule,
+		CommonModule,
+		InvestigationsModule,
+		AppCommonModule
+	],
+	providers: [
+		InvestigationsService,
+		AuthService,
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true,
+		},
+	],
+
+	bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -81,7 +81,7 @@ export class InvestigWrapTableComponent extends UpgradableComponent implements O
         .pipe(takeWhile(() => this.alive))
         .subscribe((filterValue) => {
           this.filterValues = filterValue;
-          this.loadData(filterValue);
+          this.loadData(filterValue as any);
         });
     }
     this.filterValues = { period: this.period };

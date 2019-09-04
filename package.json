@@ -33,14 +33,14 @@
   },
   "homepage": "https://github.com/CreativeIT/material-angular-dashboard",
   "dependencies": {
-    "@angular/animations": "8.0.0",
-    "@angular/common": "8.0.0",
-    "@angular/compiler": "8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/forms": "8.0.0",
-    "@angular/platform-browser": "8.0.0",
-    "@angular/platform-browser-dynamic": "8.0.0",
-    "@angular/router": "8.0.0",
+    "@angular/animations": "8.2.4",
+    "@angular/common": "8.2.4",
+    "@angular/compiler": "8.2.4",
+    "@angular/core": "^8.2.4",
+    "@angular/forms": "8.2.4",
+    "@angular/platform-browser": "8.2.4",
+    "@angular/platform-browser-dynamic": "8.2.4",
+    "@angular/router": "8.2.4",
     "@types/googlemaps": "3.36.2",
     "classlist.js": "1.1.20150312",
     "core-js": "^3.2.1",
@@ -54,8 +54,8 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.2",
     "@angular/cli": "^8.3.2",
-    "@angular/compiler-cli": "8.0.0",
-    "@angular/language-service": "8.0.0",
+    "@angular/compiler-cli": "8.2.4",
+    "@angular/language-service": "^8.2.4",
     "@types/d3": "3.5.41",
     "@types/material-design-lite": "1.1.15",
     "@types/node": "12.0.4",
@@ -71,6 +71,6 @@
     "tslint": "5.17.0",
     "tslint-angular": "3.0.2",
     "tslint-config-airbnb": "5.11.1",
-    "typescript": "3.4.5"
+    "typescript": "3.5.3"
   }
 }

@@ -32,10 +32,10 @@ export abstract class LineChartComponent implements AfterViewInit {
   constructor(private el: ElementRef) { }
 
   public ngAfterViewInit() {
-    this.container = d3.select(this.el.nativeElement);
+    /*this.container = d3.select(this.el.nativeElement);
     if (this.container[0][0]) {
       this.drawChart();
-    }
+    }*/
   }
 
   protected afterConfigure() {
@@ -104,7 +104,8 @@ export abstract class LineChartComponent implements AfterViewInit {
       .attr('y', this.svgHeight - (this.svgHeight) / 4 + this.margin + this.maxX);
   }
 
-  private drawChart() {
+  public drawChart() {
+	this.container = d3.select(this.el.nativeElement);
     this.buildBackground();
     this.buildLegend();
     this.buildNvGraph();
